@@ -4,19 +4,19 @@
     width: 100%;
     
     .description {
-        width: 50%;
-        margin-top: 5rem;
-        margin-right: 6rem;
+        width: 50vw;
+        margin-top: 2vw;
+        margin-right: 6vw;
         h1 {
-            font-size: 4.7rem;
+            font-size: 4.4vw;
             font-weight: 700;
-            line-height: 5rem;
+            line-height: 5vw;
             color:#35323e;
-            letter-spacing: -.3rem;
+            letter-spacing: -.3vw;
         }
         p {
-            font-size: 1.3rem;
-            line-height: 2rem;
+            font-size: 1.3vw;
+            line-height: 2vw;
             font-weight: 500;
         }
         .get-started {
@@ -27,7 +27,7 @@
             border: 1px solid hsl(180, 66%, 49%);
             background-color: hsl(180, 66%, 49%);
             padding: .8rem 2rem;
-            font-size: 1.3rem;
+            font-size: 1.3vw;
             cursor: pointer;
             transition: .3s;
             margin-top: 30px;
@@ -37,8 +37,12 @@
             }
         }
     }
-    .img {
-        width: 40%;
+    
+    .img{
+        width: 60vw;
+        img{
+            width: 100%;
+        }
     }
 }
 
@@ -64,7 +68,8 @@
             }
         }
         .img{
-            width: 111%;
+            overflow: hidden;
+            width: 130%;
             margin: -2rem 0 -.8rem 0;
             img{
                 width: 145%;

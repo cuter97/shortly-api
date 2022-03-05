@@ -10,7 +10,7 @@ const Card = ({props}) => {
     
       const copyTrue = () => {
         setCopy({
-          copySuccess: true,
+          copySuccess: !copy.copySuccess,
           buttonText: 'Copied!',
         })
     
@@ -22,7 +22,7 @@ const Card = ({props}) => {
     <div>
         {original_link} ------ {short_link}
         <CopyToClipboard text = {short_link}>
-                  <button onClick={copyTrue} >{copy.buttonText}</button>
+                  <button onClick={copyTrue} >{(copy.copySuccess) ? 'copy' : 'copied'}</button>
         </CopyToClipboard>
     </div>
   )
