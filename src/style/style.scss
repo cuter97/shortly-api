@@ -9,3 +9,16 @@
 
 @import 'navbar';
 @import 'header';
+@import 'input';
+@import 'card';
+
+.section{
+    background-color: #f0f1f6;
+    margin-top: 11rem;
+    padding-bottom: 5rem;
+}
+
+.orden-cards{
+    display: flex;
+    flex-direction: column-reverse;
+}

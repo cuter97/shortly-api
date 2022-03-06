@@ -1,0 +1,73 @@
+.input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3b3054;
+    width: 75%;
+    height: 9rem;
+    margin: 0 auto;
+    background-image: url('../images/bg-shorten-desktop.svg');
+    background-size: cover;
+    border-radius: 0.7rem;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    position: relative;
+    top: -5rem;
+
+    .input-text{
+        width: 70%;
+        margin-right: 2rem;
+        height: 3.4vw;
+        padding: 1.3rem;
+        border-radius: 0.8rem;
+        font-size: 1.4rem;
+        border: 1px solid #fff;
+        color: grey;
+        font-weight: 400;
+        outline: 0;
+    }
+
+    .btn{
+        text-align: center;
+        border: 1px solid #2acfcf;
+        border-radius: 0.9rem;
+        background-color: #2acfcf;
+        padding: 0.9rem 1.8rem;
+        font-weight: 600;
+        font-size: 1.2vw;
+        text-align: center;
+        color: #fff;
+        cursor: pointer;
+        transition: .3s;
+        &:hover{
+            background-color: #95e7e7;
+            border: 1px solid #95e7e7;
+        }
+    }
+}
+
+@media(max-width: 850px) {
+    .input{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 11rem;
+        background-image: url('../images/bg-shorten-mobile.svg');
+        background-size: cover;
+        top: -7rem;
+        
+        .input-text{
+            margin-right: 0;
+            font-size: 3.4vw;
+            margin-bottom: 20px;
+            height: 3.5rem;
+            width: 85%;
+        }
+        
+        .btn{
+            font-size: 3.2vw; 
+            width: 85%;
+        }
+    }
+}
