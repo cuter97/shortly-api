@@ -1,16 +1,25 @@
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import Boost from "./components/Boost"
 import Card from "./components/Card"
+import Footer from "./components/Footer"
 import Header from "./components/Header"
 import Navbar from "./components/Navbar"
 import Statistisc from "./components/Statistisc"
 import './style/style.scss'
 
+const storage = JSON.parse(localStorage.getItem('links'))
+
+
 const App = () => {
     const value = useRef(null)
 
-    const [api, setApi] = useState([])
+    const [api, setApi] = useState(storage || [])
     const [error, setError] = useState(false)
+
+    useEffect(() => {
+        localStorage.setItem('links', JSON.stringify(api))
+    }, [api])
+    
 
     const getInfo = async (value) => {
         try {
@@ -64,6 +73,7 @@ const App = () => {
             </div>
             <Statistisc/>
             <Boost/>
+            <Footer/>
         </>
     )
 }
