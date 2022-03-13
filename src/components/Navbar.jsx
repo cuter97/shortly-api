@@ -22,11 +22,11 @@ const Navbar = () => {
                 <img src={Logo} alt='app-logo' />
             </a>
             <div className='toggler' onClick={displayNavbar}>
-                <div className={(nav.open) ? 'uno' : ''}></div>
-                <div className={(nav.open) ? 'dos' : ''}></div>
-                <div className={(nav.open) ? 'tres' : ''}></div>
+                <div className={(nav.open) ? '' : 'uno'}></div>
+                <div className={(nav.open) ? '' : 'dos'}></div>
+                <div className={(nav.open) ? '' : 'tres'}></div>
             </div>
-            <div className={(nav.open) ? 'desktop-navbar' : 'desktop-navbar active'}>
+            <div className={!nav.open ? 'desktop-navbar' : 'desktop-navbar active'}>
                 <div className='general'>
                     {
                         NavItems.map((item, index) => (

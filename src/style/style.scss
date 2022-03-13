@@ -11,11 +11,12 @@
 @import 'header';
 @import 'input';
 @import 'card';
+@import 'statistics';
+@import 'boost';
 
 .section{
     background-color: #f0f1f6;
     margin-top: 11rem;
-    padding-bottom: 5rem;
 }
 
 .orden-cards{
@@ -23,3 +24,20 @@
     flex-direction: column-reverse;
 }
 
+.get-started {
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+    border-radius: 1.5rem;
+    border: 1px solid hsl(180, 66%, 49%);
+    background-color: hsl(180, 66%, 49%);
+    padding: .8rem 2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: .3s;
+    margin-top: 30px;
+    &:hover{
+        background-color: #95e7e7;
+        border: 1px solid #95e7e7;
+    }
+}

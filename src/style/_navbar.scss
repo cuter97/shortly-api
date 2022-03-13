@@ -111,7 +111,7 @@
             span {
                 display: block;
                 background-color: grey;
-                height: .5px;
+                height: 1px;
                 width: 90%;
                 margin: 1.5rem auto;
             }
@@ -123,11 +123,11 @@
                     color: #fff;
                 }
             }
-            
+
         }
         
         .active{
-            display: none;
+            display: none;  
             left: 0;
             opacity: 1;
             transition: all 0.5s ease;

@@ -1,13 +1,16 @@
 import { useRef, useState } from "react"
+import Boost from "./components/Boost"
 import Card from "./components/Card"
 import Header from "./components/Header"
 import Navbar from "./components/Navbar"
+import Statistisc from "./components/Statistisc"
 import './style/style.scss'
 
 const App = () => {
     const value = useRef(null)
 
     const [api, setApi] = useState([])
+    const [error, setError] = useState(false)
 
     const getInfo = async (value) => {
         try {
@@ -19,9 +22,11 @@ const App = () => {
                 throw Error("Link invalido")
             else
                 setApi([...api, link])
+                setError(false)
 
         } catch (error) {
             console.log(error)
+            setError(true)
         }
     }
 
@@ -40,11 +45,12 @@ const App = () => {
             <div className="section">
                 <div className="input">
                     <input 
-                        className="input-text" 
+                        className={(!error) ? 'input-text' : 'error'} 
                         type="text" 
                         ref={value}
                         placeholder='Shorten a link here...'
                     ></input>
+                    <span className={!error ? 'span-error active-span' : 'span-error'}>Please add a valid link</span>
                     <button className="btn" onClick={() => mostrar()}>Shorten it!</button>
                 </div>
 
@@ -56,6 +62,8 @@ const App = () => {
                     }
                 </div>
             </div>
+            <Statistisc/>
+            <Boost/>
         </>
     )
 }

@@ -1,0 +1,132 @@
+.container-statistics{
+    background-color: #f0f1f6;
+    padding-bottom: 15rem;
+
+    .statistics{
+        
+        .statistics-title{
+            font-size: 2.5rem;
+            font-weight: 600;
+            letter-spacing: -.15rem;
+            text-align: center;
+            margin-bottom: 1.2rem;
+        }
+        
+        .statistics-text{
+            line-height: 2rem;
+            font-size: 1.1rem;
+            color: #9e9aa7;
+            width: 25%;
+            margin: 0 auto;
+            text-align: center;
+        }
+    
+        @media(max-width: 850px){
+            .statistics-title{
+                font-size: 8vw;
+            }
+            .statistics-text{
+                font-size: 1.1rem;
+                color: #9e9aa7;
+                width: 50vw;
+            }
+        }
+    }
+    
+    .cards{
+        display: flex;
+        width: 75%;
+        margin: 0 auto;
+        justify-content: space-around;
+        padding-top: 6rem;
+        
+        .span-card{
+            background-color: rgb(42, 207, 207);
+            height: 0.6rem;
+            width: 60%;
+            position: absolute;
+            margin: 120px;
+        }
+        
+        .style{
+            max-width: 20vw;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 1.6rem;
+            z-index: 1;
+            
+            .img-container{
+                width: 80px;
+                height: 80px;
+                background-color: #3b3054;
+                position: relative;
+                top: -4rem;
+                border-radius: 50%;
+                padding: 1.2rem;
+                
+                img{
+                    width: 40px;
+                }
+            }
+            
+            .text-container{
+                margin-top: -2.5rem;
+                
+                h3{
+                    letter-spacing: -.03rem;
+                    margin-bottom: 13px;
+                }
+                
+                p{
+                    font-size: 1.05rem;
+                    opacity: 0.6;
+                }
+            }
+        }
+        
+        .card-two{
+            position: relative;
+            top: 2.5rem;
+        }
+        .card-tree{
+            position: relative;
+            top: 5rem;
+        }
+        
+    }
+    
+}
+
+@media(max-width: 850px){
+    
+    .cards{
+        flex-direction: column;
+        align-items: center;
+        width: 75%;
+
+        .style{
+            min-width: 75vw;
+            margin-bottom: 35px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .span-card{
+            display: none;
+        }
+
+        .text-container{
+            h3, p{
+                text-align: center;
+            }
+        }
+    }
+    .cards::after{
+        content: "";
+        background-color: rgb(42, 207, 207);
+        height: 70%;
+        width: 0.5rem;
+        position: absolute;
+    }
+}

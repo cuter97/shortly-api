@@ -97,6 +97,7 @@
         .origin{
             margin: 0;
             width: -webkit-fill-available;
+            width: -moz-available;
             padding-left: 1rem;
             width: 67vw;
         }
@@ -118,6 +119,7 @@
                 margin-bottom: 10px;
                 margin-top: 5px;
                 width: -webkit-fill-available;
+                width: -moz-available;
                 padding-left: 0.5rem;
             }
 
